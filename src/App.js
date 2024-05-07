@@ -1,7 +1,14 @@
+import TodoBody from "./components/TodoBody";
+import TodoHeader from "./components/TodoHeader";
+import "./style.css";
+
 function App() {
   return (
-    <div>
-      <h1>App</h1>
+    <div className="main-container">
+      <div className="container">
+        <TodoHeader />
+        <TodoBody />
+      </div>
     </div>
   );
 }

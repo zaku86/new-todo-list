@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #e3e9ff;
+}
+.main-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 50%;
+}
+.header {
+  background-color: #af7eea;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 20px;
+  border: none;
+  color: white;
+  font-size: 14px;
+}
+.todoBody {
+  border: 2px solid green;
+}
+@media screen and (max-width: 600px) {
+  .container {
+    width: 80%;
+  }
+}
