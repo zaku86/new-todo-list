@@ -25,8 +25,54 @@ body {
   font-size: 14px;
 }
 .todoBody {
-  border: 2px solid green;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  gap: 20px;
 }
+.todos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 60vh;
+  overflow: auto;
+}
+
+.Todo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo-div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.trash-icon {
+  cursor: pointer;
+}
+.button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -40px;
+  gap: 10px;
+}
+.task-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 15px 40px;
+  color: white;
+  background-color: #af7eea;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 600px) {
   .container {
     width: 80%;
