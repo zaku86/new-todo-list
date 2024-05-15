@@ -1,16 +1,17 @@
+import { GoDot } from "react-icons/go";
 import { GoDotFill } from "react-icons/go";
 import { IoTrashOutline } from "react-icons/io5";
-import { GoDot } from "react-icons/go";
 
-function Todo({ text }) {
+function Todo({ data: { id, text, isCompleted } }) {
   return (
-    <div className="Todo-container">
-      {/* <GoDotFill /> */}
-      <div className="todo-div">
-        <GoDot size={24} />
-        <p>{text}</p>
+    <div className="todo">
+      <div>
+        {isCompleted ? <GoDotFill size={16} /> : <GoDot size={16} />}
+
+        <p style={{ textDecoration: isCompleted && "line-through" }}>{text}</p>
       </div>
-      <IoTrashOutline className="trash-icon" size={20} />
+
+      <IoTrashOutline className="trashcan" size={16} />
     </div>
   );
 }

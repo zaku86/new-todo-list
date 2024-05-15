@@ -1,15 +1,11 @@
 import { FaPlus } from "react-icons/fa";
 
-function Button({ Icon, text = "New Task" }) {
-  console.log(Icon);
+function Button() {
   return (
-    <button className="task-button">
-      {/* <FaPlus  /> */}
-      {Icon ? <Icon size={10} /> : <FaPlus size={10} />}
-      {/* {Icon && <Icon size={10} />} */}
-      <p>{text}</p>
+    <button className="plus-button">
+      <FaPlus />
+      <p>New task</p>
     </button>
   );
 }
-
 export default Button;

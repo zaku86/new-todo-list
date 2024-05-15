@@ -1,25 +1,23 @@
 import Todo from "./Todo";
 import Button from "./Button";
+import React, { useState } from "react";
 
 const data = [
-  "Styleguide creation",
-  "Send wireframes",
-  "Readability About page",
-  "Check color contrast",
+  { id: 1, text: "Styleguide creation", isCompleted: true },
+  { id: 2, text: "Send wireframes", isCompleted: false },
+  { id: 3, text: "Readability About page", isCompleted: false },
+  { id: 4, text: " Check color contrast", isCompleted: true },
 ];
 
 function TodoBody() {
   return (
-    <div className="todoBody">
-      <div className="todos">
-        {data.map((el, i) => (
-          <Todo text={el} key={i} />
-        ))}
+    <div className="todo-body">
+      <div>
+        {data.map((el) => {
+          return <Todo key={el.id} data={el} />;
+        })}
       </div>
-
-      <div className="button-div">
-        <Button />
-      </div>
+      <Button />
     </div>
   );
 }

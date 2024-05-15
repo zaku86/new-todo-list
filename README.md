@@ -18,10 +18,11 @@ Our todo list app would have 5 components
   lists to render the list of todos in the todoBody component.
   Make sure you fix styling issues like overflowing and make sure you jdon't have any
   erros on the console
+- Conditionally render styling on the todo icon and paragraph so that we have
+  a diffefrent icon when the task is completed and the text decoration should be line through for tasks that are completed as well. use React conditioning to achieve this
 
 ## TOMORROW
 
-- React conditions in action (change data structure)
 - React Events
 - React Hooks
 - React Forms
