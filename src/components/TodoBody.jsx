@@ -1,4 +1,4 @@
-import Todo from "./Todo";
+import Task from "./Task";
 import React, { useState } from "react";
 import AddTodo from "./AddTodo";
 
@@ -11,7 +11,9 @@ function TodoBody() {
       {todos.length > 0 && (
         <div className="todos">
           {todos.map((el) => {
-            return <Todo key={el.id} data={el} />;
+            return (
+              <Task key={el.id} data={el} todos={todos} setTodos={setTodos} />
+            );
           })}
         </div>
       )}

@@ -11,7 +11,7 @@ function AddTodo({ todos, setTodos }) {
       text: text,
       isCompleted: false,
     };
-    console.log(newTodo);
+
     setTodos([newTodo, ...todos]);
 
     setText("");
