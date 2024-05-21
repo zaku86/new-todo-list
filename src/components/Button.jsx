@@ -1,10 +1,10 @@
 import { FaPlus } from "react-icons/fa";
 
-function Button() {
+function Button({ text, addFunction }) {
   return (
-    <button className="plus-button">
+    <button onClick={addFunction} className="plus-button">
       <FaPlus />
-      <p>New task</p>
+      <p>{text}</p>
     </button>
   );
 }

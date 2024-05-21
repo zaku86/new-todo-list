@@ -37,7 +37,7 @@ body {
   flex-direction: column;
   gap: 30px;
 }
-.todo-body > div {
+.todos {
   width: 100%;
   padding: 20px;
   display: flex;
@@ -67,17 +67,32 @@ body {
   color: white;
   border: none;
   padding: 14px 40px;
-  border-radius: 25px;
   font-size: 16px;
   display: flex;
   flex-direction: row;
   gap: 10px;
-  margin-bottom: -42px;
   cursor: pointer;
 }
 .trashcan {
   cursor: pointer;
 }
+
+.add-todo {
+  display: flex;
+  border: 2px solid #af7eea;
+  margin-bottom: -42px;
+  width: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.add-todo > input {
+  padding: 0px 15px;
+  font-size: 15px;
+  flex: 1;
+  border: none;
+  outline: none;
+}
+
 @media screen and (max-width: 500px) {
   .todo-container {
     width: 80%;

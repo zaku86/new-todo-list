@@ -1,23 +1,22 @@
 import Todo from "./Todo";
-import Button from "./Button";
 import React, { useState } from "react";
-
-const data = [
-  { id: 1, text: "Styleguide creation", isCompleted: true },
-  { id: 2, text: "Send wireframes", isCompleted: false },
-  { id: 3, text: "Readability About page", isCompleted: false },
-  { id: 4, text: " Check color contrast", isCompleted: true },
-];
+import AddTodo from "./AddTodo";
 
 function TodoBody() {
+  const [todos, setTodos] = useState([]);
+
   return (
     <div className="todo-body">
-      <div>
-        {data.map((el) => {
-          return <Todo key={el.id} data={el} />;
-        })}
-      </div>
-      <Button />
+      {todos.length === 0 && <p>No todos added yet...</p>}
+      {todos.length > 0 && (
+        <div className="todos">
+          {todos.map((el) => {
+            return <Todo key={el.id} data={el} />;
+          })}
+        </div>
+      )}
+
+      <AddTodo todos={todos} setTodos={setTodos} />
     </div>
   );
 }
